@@ -59,7 +59,7 @@ public class inicio2 extends AppCompatActivity {
 
                 Toast.makeText(inicio2.this, "solicitud prestamo", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(inicio2.this, Prestamo.class);
+                Intent intent = new Intent(inicio2.this, listaConsumo.class);
                 startActivity(intent);
             }
         });

@@ -38,7 +38,7 @@ public class listaConsumo extends AppCompatActivity {
 
     private void getPosts () {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://localhost:8083/siess-1.0.0/")
+                .baseUrl("http://10.75.197.98:8083/siess-1.0.0/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
 

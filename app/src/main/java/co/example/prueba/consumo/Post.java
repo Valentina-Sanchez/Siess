@@ -6,7 +6,7 @@ public class Post {
     private int pkEquipo;
     private String nombre;
     private  int serial;
-    private int modelo;
+    private String modelo;
     private int placaSena;
     private int numeroCertificacion;
     private String vidaUtilPrevista;
@@ -16,6 +16,9 @@ public class Post {
     private Date FechaRetiro;
     private  int fkFabricante;
     private  int fkfuncion;
+
+
+
 
     public int getPkEquipo() {
         return pkEquipo;
@@ -57,11 +60,11 @@ public class Post {
         this.serial = serial;
     }
 
-    public int getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(int modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
