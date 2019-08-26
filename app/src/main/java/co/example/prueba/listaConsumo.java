@@ -21,19 +21,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class listaConsumo extends AppCompatActivity {
     ListView list;
     ArrayList<String> titles = new ArrayList<>();
-
     ArrayAdapter arrayAdapter ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_lista_consumo);
-         arrayAdapter = new ArrayAdapter(listaConsumo.this,android.R.layout.simple_list_item_1,titles);
+        arrayAdapter = new ArrayAdapter(listaConsumo.this,android.R.layout.simple_list_item_1,titles);
         list = findViewById(R.id.list);
 
         list.setAdapter(arrayAdapter);
 
         getPosts();
+
     }
 
     private void getPosts () {

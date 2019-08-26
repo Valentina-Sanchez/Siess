@@ -4,13 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Prestamo"
-    android:background="@drawable/fondo">
+    tools:context=".Prestamo">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#d0a19a89"></LinearLayout>
+
 
     <TextView
         android:id="@+id/sp"
@@ -90,7 +86,7 @@
 
 
     <Button
-        android:id="@+id/btnAceptar"
+        android:id="@+id/btnAceptarP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

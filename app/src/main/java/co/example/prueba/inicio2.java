@@ -30,6 +30,16 @@ public class inicio2 extends AppCompatActivity {
 
         FloatingActionButton fab = findViewById(R.id.fab);
 
+        FloatingActionButton salir=findViewById(R.id.sal);
+
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(inicio2.this, inicio.class);
+                startActivity(in);
+            }
+        });
+
         lista2= new ArrayList<>();
         recyclerView= findViewById(R.id.opRecicler);
 
@@ -49,7 +59,7 @@ public class inicio2 extends AppCompatActivity {
 
                 Toast.makeText(inicio2.this, "solicitud prestamo", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(inicio2.this, listaConsumo.class);
+                Intent intent = new Intent(inicio2.this, Prestamo.class);
                 startActivity(intent);
             }
         });

@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface PostService {
 
-        String API_ROUTE = "/posts";
+        String API_ROUTE = "webresources/siess.jpa.entidades.equipo";
 
         @GET(API_ROUTE)
         Call<List<Post>> getPost();

@@ -4,9 +4,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,7 +20,8 @@ import java.util.Locale;
 public class Prestamo extends AppCompatActivity {
     EditText fecha;
     Calendar calendario = Calendar.getInstance();
-    Spinner spinner;
+    Spinner spinner, municipio, ficha, responsable;
+    Button btnAceptar;
 
 
     @Override
@@ -27,9 +30,32 @@ public class Prestamo extends AppCompatActivity {
         setContentView(R.layout.activity_prestamo);
             getSupportActionBar().hide();
         spinner = (Spinner) findViewById(R.id.spinner);
-        String[] letra = {"Prestamo","Reserva"};
-        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, letra));
+        municipio = (Spinner) findViewById(R.id.spinnermu);
+        ficha = (Spinner) findViewById(R.id.spinnerfi);
+        responsable = (Spinner) findViewById(R.id.spinnerres);
 
+        String[] pro = {"Proceso","Prestamo","Reserva"};
+        String[] muni = {"Municipio","Rosas","Piendamo","Caloto","Silvia"};
+        String[] fi = {"Ficha","1613314","1584548","1542123","1612245"};
+        String[] res = {"Responsable","Armando Casas","Camila Muñoz","Victor Segovia","Juan Diego Sanchez"};
+
+
+
+        spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, pro));
+        municipio.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, muni));
+        ficha.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, fi));
+        responsable.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, res));
+
+        btnAceptar= findViewById(R.id.btnAceptarP);
+
+        btnAceptar.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Prestamo.this, inicio2.class);
+                startActivity(intent);
+            }
+
+        });
 
         fecha = findViewById(R.id.calen);
         fecha.setOnClickListener(new View.OnClickListener() {

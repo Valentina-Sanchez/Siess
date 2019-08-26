@@ -40,13 +40,14 @@
         android:background="#d0a19a89"/>
 
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/opcRecicler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="110dp"
         ></androidx.recyclerview.widget.RecyclerView>
+
+
 
 
 

@@ -4,8 +4,6 @@ import java.util.Date;
 
 public class Post {
     private int pkEquipo;
-    private  int fkFabricante;
-    private  int fkfuncion;
     private String nombre;
     private  int serial;
     private int modelo;
@@ -16,6 +14,8 @@ public class Post {
     private Date FechaCompra;
     private Date FechaInicioOperacion;
     private Date FechaRetiro;
+    private  int fkFabricante;
+    private  int fkfuncion;
 
     public int getPkEquipo() {
         return pkEquipo;
